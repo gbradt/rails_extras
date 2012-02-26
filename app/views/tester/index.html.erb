@@ -1,0 +1,25 @@
+<html>
+<head><title>Test something</title></head>
+
+<body>
+
+<% form_tag :action => "load_data" do %>
+
+    <%= submit_tag 'Load to DB (does nothing right now)' %></td></tr>
+
+<% end %>
+
+<% form_tag :action => "retrieve_data" do %>
+
+    <%= submit_tag 'Retrieve from DB (all rows from play_info table)' %></td></tr>
+
+<% end %>
+
+<% form_tag :action => "get_info" do %>
+
+    <%= submit_tag 'Get info from stream server' %></td></tr>
+
+<% end %>
+
+</body>
+</html>

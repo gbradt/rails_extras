@@ -1,0 +1,7 @@
+xml.now_playing do
+	xml.listeners(@listeners)
+	xml.mix(@mix)
+	xml.artist(@artist)
+	xml.title(@title)
+	xml.year(@year)
+end 

@@ -1,0 +1,21 @@
+<html>
+<head><title>Now Playing</title></head>
+
+<body>
+<h2>Now Playing</h2>
+
+<p>Listeners: <%=@listeners%></p>
+<p>Mix: <%=@mix%></p>
+<p>Artist: <%=@artist%></p>
+<p>Title: <%=@title%></p>
+<p>Year: <%=@year%></p>
+
+<% form_tag :action => "set_mix_counter" do %>
+
+    <p>Mix Counter:<%= text_field_tag 'mixCounter', nil, :size => 10 %></p>
+    <p><%= submit_tag 'Update mix counter' %></p>
+
+<% end %>
+
+</body>
+</html>

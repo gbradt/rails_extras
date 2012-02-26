@@ -1,0 +1,11 @@
+<html>
+<head><title>Done</title></head>
+
+<body>
+
+<% @rows.each do |nextRow| %>
+    <p><%=nextRow.created_at%> | <%=nextRow.track_id%> | <%=nextRow.listeners%> | <%=nextRow.mix_id%> | <%=nextRow.icecast_title%> </p>
+<% end %>
+
+</body>
+</html>

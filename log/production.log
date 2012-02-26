@@ -1,0 +1,302 @@
+# Logfile created on Fri Apr 09 21:17:24 -0400 2010
+
+Processing NowPlayingController#index (for 127.0.0.1 at 2010-04-09 21:21:21) [GET]
+  [4;36;1mCurrentInfo Load (0.5ms)[0m   [0;1mSELECT * FROM "current_infos" LIMIT 1[0m
+lastUpdate = 
+30 seconds ago was Fri Apr 09 21:20:51 -0400 2010
+  [4;35;1mPlayInfo Load (0.3ms)[0m   [0mSELECT * FROM "play_infos" ORDER BY play_infos.id DESC LIMIT 1[0m
+  [4;36;1mMix Load (0.3ms)[0m   [0;1mSELECT * FROM "mixes" WHERE ("mixes"."mix_id" = 2) LIMIT 1[0m
+  [4;35;1mDisplayInfo Load (0.2ms)[0m   [0mSELECT * FROM "display_infos" WHERE ("display_infos"."track_id" = 9048) LIMIT 1[0m
+  [4;36;1mCurrentInfo Create (0.4ms)[0m   [0;1mINSERT INTO "current_infos" ("artist", "updated_at", "title", "mix_icecast_title", "year", "listeners", "created_at") VALUES('Los Amigos Invisibles', '2010-04-10 01:21:21', 'La vecina', 'Between Two Islands - Summer mix 2006', '2000', 0, '2010-04-10 01:21:21')[0m
+Rendering now_playing/index
+Completed in 28ms (View: 3, DB: 2) | 200 OK [http://localhost/now_playing]
+
+
+Processing NowPlayingController#index (for 127.0.0.1 at 2010-04-09 21:21:30) [GET]
+  [4;35;1mCurrentInfo Load (0.5ms)[0m   [0mSELECT * FROM "current_infos" LIMIT 1[0m
+lastUpdate = 2010-04-10 01:21:21 UTC
+30 seconds ago was Fri Apr 09 21:21:00 -0400 2010
+Rendering now_playing/index
+Completed in 24ms (View: 2, DB: 0) | 200 OK [http://localhost/now_playing]
+
+
+Processing NowPlayingController#index (for 127.0.0.1 at 2010-04-09 21:22:06) [GET]
+  [4;36;1mCurrentInfo Load (0.5ms)[0m   [0;1mSELECT * FROM "current_infos" LIMIT 1[0m
+lastUpdate = 2010-04-10 01:21:21 UTC
+30 seconds ago was Fri Apr 09 21:21:36 -0400 2010
+  [4;35;1mPlayInfo Load (0.3ms)[0m   [0mSELECT * FROM "play_infos" ORDER BY play_infos.id DESC LIMIT 1[0m
+  [4;36;1mMix Load (0.3ms)[0m   [0;1mSELECT * FROM "mixes" WHERE ("mixes"."mix_id" = 2) LIMIT 1[0m
+  [4;35;1mDisplayInfo Load (0.5ms)[0m   [0mSELECT * FROM "display_infos" WHERE ("display_infos"."track_id" = 9048) LIMIT 1[0m
+Rendering now_playing/index
+Completed in 8ms (View: 2, DB: 2) | 200 OK [http://localhost/now_playing]
+
+
+Processing NowPlayingController#index (for 127.0.0.1 at 2010-04-09 21:24:05) [GET]
+  [4;36;1mCurrentInfo Load (0.6ms)[0m   [0;1mSELECT * FROM "current_infos" LIMIT 1[0m
+lastUpdate = 2010-04-10 01:21:21 UTC
+30 seconds ago was Fri Apr 09 21:23:35 -0400 2010
+  [4;35;1mPlayInfo Load (0.4ms)[0m   [0mSELECT * FROM "play_infos" ORDER BY play_infos.id DESC LIMIT 1[0m
+  [4;36;1mMix Load (0.3ms)[0m   [0;1mSELECT * FROM "mixes" WHERE ("mixes"."mix_id" = 2) LIMIT 1[0m
+  [4;35;1mDisplayInfo Load (1.2ms)[0m   [0mSELECT * FROM "display_infos" WHERE ("display_infos"."track_id" = 9048) LIMIT 1[0m
+Rendering now_playing/index
+Completed in 9ms (View: 2, DB: 3) | 200 OK [http://localhost/now_playing]
+
+
+Processing TesterController#index (for 127.0.0.1 at 2010-04-09 21:28:05) [GET]
+Rendering tester/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/tester]
+
+
+Processing TesterController#retrieve_data (for 127.0.0.1 at 2010-04-09 21:28:09) [POST]
+  Parameters: {"commit"=>"Retrieve from DB (all rows from mix_songs table)", "authenticity_token"=>"2wOf7aHb2WD1JoRPWESK/G66eYeE8g7LXRsAai4fKAM="}
+  [4;36;1mPlayInfo Load (2.9ms)[0m   [0;1mSELECT * FROM "play_infos" ORDER BY created_at DESC[0m
+Rendering tester/retrieve_data
+Completed in 28ms (View: 23, DB: 3) | 200 OK [http://localhost/tester/retrieve_data]
+
+
+Processing TesterController#retrieve_data (for 127.0.0.1 at 2010-04-09 21:28:28) [POST]
+  Parameters: {"commit"=>"Retrieve from DB (all rows from mix_songs table)", "authenticity_token"=>"2wOf7aHb2WD1JoRPWESK/G66eYeE8g7LXRsAai4fKAM="}
+  [4;35;1mPlayInfo Load (2.4ms)[0m   [0mSELECT * FROM "play_infos" ORDER BY created_at DESC[0m
+Rendering tester/retrieve_data
+Completed in 7ms (View: 3, DB: 2) | 200 OK [http://localhost/tester/retrieve_data]
+
+
+Processing TesterController#retrieve_data (for 127.0.0.1 at 2010-04-09 21:29:51) [POST]
+  Parameters: {"commit"=>"Retrieve from DB (all rows from mix_songs table)", "authenticity_token"=>"2wOf7aHb2WD1JoRPWESK/G66eYeE8g7LXRsAai4fKAM="}
+  [4;36;1mPlayInfo Load (3.7ms)[0m   [0;1mSELECT * FROM "play_infos" ORDER BY created_at DESC[0m
+Rendering tester/retrieve_data
+Completed in 8ms (View: 3, DB: 4) | 200 OK [http://localhost/tester/retrieve_data]
+
+
+Processing TesterController#retrieve_data (for 127.0.0.1 at 2010-04-09 21:30:50) [POST]
+  Parameters: {"commit"=>"Retrieve from DB (all rows from mix_songs table)", "authenticity_token"=>"2wOf7aHb2WD1JoRPWESK/G66eYeE8g7LXRsAai4fKAM="}
+  [4;35;1mPlayInfo Load (2.1ms)[0m   [0mSELECT * FROM "play_infos" ORDER BY created_at DESC[0m
+Rendering tester/retrieve_data
+Completed in 6ms (View: 3, DB: 2) | 200 OK [http://localhost/tester/retrieve_data]
+
+
+Processing NowPlayingController#index (for 127.0.0.1 at 2010-04-09 21:31:00) [GET]
+  [4;36;1mCurrentInfo Load (0.5ms)[0m   [0;1mSELECT * FROM "current_infos" LIMIT 1[0m
+lastUpdate = 2010-04-10 01:21:21 UTC
+30 seconds ago was Fri Apr 09 21:30:30 -0400 2010
+  [4;35;1mPlayInfo Load (0.2ms)[0m   [0mSELECT * FROM "play_infos" ORDER BY play_infos.id DESC LIMIT 1[0m
+  [4;36;1mMix Load (0.2ms)[0m   [0;1mSELECT * FROM "mixes" WHERE ("mixes"."mix_id" = 2) LIMIT 1[0m
+  [4;35;1mDisplayInfo Load (0.2ms)[0m   [0mSELECT * FROM "display_infos" WHERE ("display_infos"."track_id" = 321) LIMIT 1[0m
+  [4;36;1mCurrentInfo Update (0.4ms)[0m   [0;1mUPDATE "current_infos" SET "title" = 'Miss Modular', "year" = '1997', "artist" = 'Stereolab', "updated_at" = '2010-04-10 01:31:00' WHERE "id" = 1[0m
+Rendering now_playing/index
+Completed in 24ms (View: 3, DB: 2) | 200 OK [http://localhost/now_playing]
+
+
+Processing NowPlayingController#index (for 127.0.0.1 at 2010-04-09 21:31:31) [GET]
+  [4;35;1mCurrentInfo Load (0.3ms)[0m   [0mSELECT * FROM "current_infos" LIMIT 1[0m
+lastUpdate = 2010-04-10 01:31:00 UTC
+30 seconds ago was Fri Apr 09 21:31:01 -0400 2010
+  [4;36;1mPlayInfo Load (0.7ms)[0m   [0;1mSELECT * FROM "play_infos" ORDER BY play_infos.id DESC LIMIT 1[0m
+  [4;35;1mMix Load (0.3ms)[0m   [0mSELECT * FROM "mixes" WHERE ("mixes"."mix_id" = 2) LIMIT 1[0m
+  [4;36;1mDisplayInfo Load (0.2ms)[0m   [0;1mSELECT * FROM "display_infos" WHERE ("display_infos"."track_id" = 321) LIMIT 1[0m
+Rendering now_playing/index
+Completed in 8ms (View: 2, DB: 2) | 200 OK [http://localhost/now_playing]
+
+
+Processing NowPlayingController#index (for 127.0.0.1 at 2010-04-09 21:31:53) [GET]
+  [4;35;1mCurrentInfo Load (0.4ms)[0m   [0mSELECT * FROM "current_infos" LIMIT 1[0m
+lastUpdate = 2010-04-10 01:31:00 UTC
+30 seconds ago was Fri Apr 09 21:31:23 -0400 2010
+  [4;36;1mPlayInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "play_infos" ORDER BY play_infos.id DESC LIMIT 1[0m
+  [4;35;1mMix Load (0.4ms)[0m   [0mSELECT * FROM "mixes" WHERE ("mixes"."mix_id" = 2) LIMIT 1[0m
+  [4;36;1mDisplayInfo Load (0.2ms)[0m   [0;1mSELECT * FROM "display_infos" WHERE ("display_infos"."track_id" = 321) LIMIT 1[0m
+Rendering now_playing/index
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://localhost/now_playing]
+
+
+Processing NowPlayingController#index (for 127.0.0.1 at 2010-04-09 21:31:59) [GET]
+  [4;35;1mCurrentInfo Load (1.1ms)[0m   [0mSELECT * FROM "current_infos" LIMIT 1[0m
+lastUpdate = 2010-04-10 01:31:00 UTC
+30 seconds ago was Fri Apr 09 21:31:29 -0400 2010
+  [4;36;1mPlayInfo Load (0.9ms)[0m   [0;1mSELECT * FROM "play_infos" ORDER BY play_infos.id DESC LIMIT 1[0m
+  [4;35;1mMix Load (0.3ms)[0m   [0mSELECT * FROM "mixes" WHERE ("mixes"."mix_id" = 2) LIMIT 1[0m
+  [4;36;1mDisplayInfo Load (0.2ms)[0m   [0;1mSELECT * FROM "display_infos" WHERE ("display_infos"."track_id" = 321) LIMIT 1[0m
+Rendering now_playing/index
+Completed in 7ms (View: 2, DB: 2) | 200 OK [http://localhost/now_playing]
+
+
+Processing NowPlayingController#index (for 127.0.0.1 at 2010-04-09 21:32:08) [GET]
+  [4;35;1mCurrentInfo Load (0.3ms)[0m   [0mSELECT * FROM "current_infos" LIMIT 1[0m
+lastUpdate = 2010-04-10 01:31:00 UTC
+30 seconds ago was Fri Apr 09 21:31:38 -0400 2010
+  [4;36;1mPlayInfo Load (0.2ms)[0m   [0;1mSELECT * FROM "play_infos" ORDER BY play_infos.id DESC LIMIT 1[0m
+  [4;35;1mMix Load (0.2ms)[0m   [0mSELECT * FROM "mixes" WHERE ("mixes"."mix_id" = 2) LIMIT 1[0m
+  [4;36;1mDisplayInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "display_infos" WHERE ("display_infos"."track_id" = 321) LIMIT 1[0m
+Rendering now_playing/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/now_playing]
+
+
+Processing NowPlayingController#index (for 127.0.0.1 at 2010-04-09 21:32:09) [GET]
+  [4;35;1mCurrentInfo Load (0.3ms)[0m   [0mSELECT * FROM "current_infos" LIMIT 1[0m
+lastUpdate = 2010-04-10 01:31:00 UTC
+30 seconds ago was Fri Apr 09 21:31:39 -0400 2010
+  [4;36;1mPlayInfo Load (0.2ms)[0m   [0;1mSELECT * FROM "play_infos" ORDER BY play_infos.id DESC LIMIT 1[0m
+  [4;35;1mMix Load (0.6ms)[0m   [0mSELECT * FROM "mixes" WHERE ("mixes"."mix_id" = 2) LIMIT 1[0m
+  [4;36;1mDisplayInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "display_infos" WHERE ("display_infos"."track_id" = 321) LIMIT 1[0m
+Rendering now_playing/index
+Completed in 7ms (View: 2, DB: 1) | 200 OK [http://localhost/now_playing]
+
+
+Processing TesterController#retrieve_data (for 127.0.0.1 at 2010-04-09 21:35:41) [POST]
+  Parameters: {"commit"=>"Retrieve from DB (all rows from mix_songs table)", "authenticity_token"=>"2wOf7aHb2WD1JoRPWESK/G66eYeE8g7LXRsAai4fKAM="}
+  [4;35;1mPlayInfo Load (3.7ms)[0m   [0mSELECT * FROM "play_infos" ORDER BY created_at DESC[0m
+Rendering tester/retrieve_data
+Completed in 9ms (View: 4, DB: 4) | 200 OK [http://localhost/tester/retrieve_data]
+
+
+Processing NowPlayingController#index (for 127.0.0.1 at 2010-04-09 21:35:51) [GET]
+  [4;36;1mCurrentInfo Load (0.4ms)[0m   [0;1mSELECT * FROM "current_infos" LIMIT 1[0m
+lastUpdate = 2010-04-10 01:31:00 UTC
+30 seconds ago was Fri Apr 09 21:35:21 -0400 2010
+  [4;35;1mPlayInfo Load (0.2ms)[0m   [0mSELECT * FROM "play_infos" ORDER BY play_infos.id DESC LIMIT 1[0m
+  [4;36;1mMix Load (0.3ms)[0m   [0;1mSELECT * FROM "mixes" WHERE ("mixes"."mix_id" = 2) LIMIT 1[0m
+  [4;35;1mDisplayInfo Load (0.3ms)[0m   [0mSELECT * FROM "display_infos" WHERE ("display_infos"."track_id" = 9063) LIMIT 1[0m
+  [4;36;1mCurrentInfo Update (0.4ms)[0m   [0;1mUPDATE "current_infos" SET "title" = 'Never gonna give you up', "year" = '1971', "artist" = 'Isaac Hayes', "updated_at" = '2010-04-10 01:35:51' WHERE "id" = 1[0m
+Rendering now_playing/index
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://localhost/now_playing]
+
+
+Processing NowPlayingController#index (for 127.0.0.1 at 2010-04-09 21:35:52) [GET]
+  [4;35;1mCurrentInfo Load (0.4ms)[0m   [0mSELECT * FROM "current_infos" LIMIT 1[0m
+lastUpdate = 2010-04-10 01:35:51 UTC
+30 seconds ago was Fri Apr 09 21:35:22 -0400 2010
+Rendering now_playing/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/now_playing]
+
+
+Processing NowPlayingController#index (for 127.0.0.1 at 2010-04-09 21:37:28) [GET]
+  [4;36;1mCurrentInfo Load (0.5ms)[0m   [0;1mSELECT * FROM "current_infos" LIMIT 1[0m
+lastUpdate = 2010-04-10 01:35:51 UTC
+30 seconds ago was Fri Apr 09 21:36:58 -0400 2010
+  [4;35;1mPlayInfo Load (0.3ms)[0m   [0mSELECT * FROM "play_infos" ORDER BY play_infos.id DESC LIMIT 1[0m
+  [4;36;1mMix Load (0.3ms)[0m   [0;1mSELECT * FROM "mixes" WHERE ("mixes"."mix_id" = 2) LIMIT 1[0m
+  [4;35;1mDisplayInfo Load (0.5ms)[0m   [0mSELECT * FROM "display_infos" WHERE ("display_infos"."track_id" = 9063) LIMIT 1[0m
+Rendering now_playing/index
+Completed in 9ms (View: 2, DB: 2) | 200 OK [http://localhost/now_playing]
+
+
+Processing TesterController#index (for 127.0.0.1 at 2010-04-09 21:56:44) [GET]
+Rendering tester/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/tester]
+
+
+Processing TesterController#retrieve_data (for 127.0.0.1 at 2010-04-09 21:56:49) [POST]
+  Parameters: {"commit"=>"Retrieve from DB (all rows from play_info table)", "authenticity_token"=>"2wOf7aHb2WD1JoRPWESK/G66eYeE8g7LXRsAai4fKAM="}
+  [4;36;1mPlayInfo Load (7.8ms)[0m   [0;1mSELECT * FROM "play_infos" ORDER BY created_at DESC[0m
+Rendering tester/retrieve_data
+Completed in 38ms (View: 27, DB: 8) | 200 OK [http://localhost/tester/retrieve_data]
+
+
+Processing NowPlayingController#index (for 127.0.0.1 at 2010-04-09 21:57:05) [GET]
+  [4;35;1mCurrentInfo Load (0.5ms)[0m   [0mSELECT * FROM "current_infos" LIMIT 1[0m
+lastRefresh = 
+30 seconds ago was Fri Apr 09 21:56:35 -0400 2010
+  [4;36;1mPlayInfo Load (1.4ms)[0m   [0;1mSELECT * FROM "play_infos" ORDER BY play_infos.id DESC LIMIT 1[0m
+  [4;35;1mMix Load (0.3ms)[0m   [0mSELECT * FROM "mixes" WHERE ("mixes"."mix_id" = 2) LIMIT 1[0m
+  [4;36;1mDisplayInfo Load (0.2ms)[0m   [0;1mSELECT * FROM "display_infos" WHERE ("display_infos"."track_id" = 9087) LIMIT 1[0m
+  [4;35;1mCurrentInfo Update (0.3ms)[0m   [0mUPDATE "current_infos" SET "last_refresh" = '2010-04-10 01:57:05', "title" = 'The truth', "year" = '2005', "artist" = 'Anthony Hamilton', "updated_at" = '2010-04-10 01:57:05' WHERE "id" = 1[0m
+Rendering now_playing/index
+Completed in 27ms (View: 3, DB: 3) | 200 OK [http://localhost/now_playing]
+
+
+Processing NowPlayingController#index (for 127.0.0.1 at 2010-04-09 21:57:23) [GET]
+  [4;36;1mCurrentInfo Load (0.5ms)[0m   [0;1mSELECT * FROM "current_infos" LIMIT 1[0m
+lastRefresh = 2010-04-10 01:57:05 UTC
+30 seconds ago was Fri Apr 09 21:56:53 -0400 2010
+Rendering now_playing/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/now_playing]
+
+
+Processing NowPlayingController#index (for 127.0.0.1 at 2010-04-09 21:57:44) [GET]
+  [4;35;1mCurrentInfo Load (0.5ms)[0m   [0mSELECT * FROM "current_infos" LIMIT 1[0m
+lastRefresh = 2010-04-10 01:57:05 UTC
+30 seconds ago was Fri Apr 09 21:57:14 -0400 2010
+  [4;36;1mPlayInfo Load (0.3ms)[0m   [0;1mSELECT * FROM "play_infos" ORDER BY play_infos.id DESC LIMIT 1[0m
+  [4;35;1mMix Load (0.9ms)[0m   [0mSELECT * FROM "mixes" WHERE ("mixes"."mix_id" = 2) LIMIT 1[0m
+  [4;36;1mDisplayInfo Load (0.5ms)[0m   [0;1mSELECT * FROM "display_infos" WHERE ("display_infos"."track_id" = 9087) LIMIT 1[0m
+  [4;35;1mCurrentInfo Update (0.5ms)[0m   [0mUPDATE "current_infos" SET "last_refresh" = '2010-04-10 01:57:44', "updated_at" = '2010-04-10 01:57:44' WHERE "id" = 1[0m
+Rendering now_playing/index
+Completed in 13ms (View: 2, DB: 3) | 200 OK [http://localhost/now_playing]
+
+
+Processing NowPlayingController#index (for 127.0.0.1 at 2010-04-09 21:58:44) [GET]
+  [4;36;1mCurrentInfo Load (0.4ms)[0m   [0;1mSELECT * FROM "current_infos" LIMIT 1[0m
+lastRefresh = 2010-04-10 01:57:44 UTC
+30 seconds ago was Fri Apr 09 21:58:14 -0400 2010
+  [4;35;1mPlayInfo Load (0.2ms)[0m   [0mSELECT * FROM "play_infos" ORDER BY play_infos.id DESC LIMIT 1[0m
+  [4;36;1mMix Load (0.2ms)[0m   [0;1mSELECT * FROM "mixes" WHERE ("mixes"."mix_id" = 2) LIMIT 1[0m
+  [4;35;1mDisplayInfo Load (0.2ms)[0m   [0mSELECT * FROM "display_infos" WHERE ("display_infos"."track_id" = 9087) LIMIT 1[0m
+  [4;36;1mCurrentInfo Update (0.5ms)[0m   [0;1mUPDATE "current_infos" SET "last_refresh" = '2010-04-10 01:58:44', "updated_at" = '2010-04-10 01:58:44' WHERE "id" = 1[0m
+Rendering now_playing/index
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://localhost/now_playing]
+
+
+Processing NowPlayingController#index (for 127.0.0.1 at 2010-04-09 21:58:45) [GET]
+  [4;35;1mCurrentInfo Load (0.6ms)[0m   [0mSELECT * FROM "current_infos" LIMIT 1[0m
+lastRefresh = 2010-04-10 01:58:44 UTC
+30 seconds ago was Fri Apr 09 21:58:15 -0400 2010
+Rendering now_playing/index
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://localhost/now_playing]
+
+
+Processing NowPlayingController#index (for 127.0.0.1 at 2010-04-09 21:58:45) [GET]
+  [4;36;1mCurrentInfo Load (0.4ms)[0m   [0;1mSELECT * FROM "current_infos" LIMIT 1[0m
+lastRefresh = 2010-04-10 01:58:44 UTC
+30 seconds ago was Fri Apr 09 21:58:15 -0400 2010
+Rendering now_playing/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/now_playing]
+
+
+Processing NowPlayingController#index to xml (for 127.0.0.1 at 2010-04-09 21:58:57) [GET]
+  [4;35;1mCurrentInfo Load (0.3ms)[0m   [0mSELECT * FROM "current_infos" LIMIT 1[0m
+lastRefresh = 2010-04-10 01:58:44 UTC
+30 seconds ago was Fri Apr 09 21:58:27 -0400 2010
+Rendering now_playing/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/now_playing.xml]
+
+
+Processing NowPlayingController#index to xml (for 127.0.0.1 at 2010-04-09 21:59:29) [GET]
+  [4;36;1mCurrentInfo Load (0.5ms)[0m   [0;1mSELECT * FROM "current_infos" LIMIT 1[0m
+lastRefresh = 2010-04-10 01:58:44 UTC
+30 seconds ago was Fri Apr 09 21:58:59 -0400 2010
+  [4;35;1mPlayInfo Load (0.4ms)[0m   [0mSELECT * FROM "play_infos" ORDER BY play_infos.id DESC LIMIT 1[0m
+  [4;36;1mMix Load (0.3ms)[0m   [0;1mSELECT * FROM "mixes" WHERE ("mixes"."mix_id" = 2) LIMIT 1[0m
+  [4;35;1mDisplayInfo Load (0.5ms)[0m   [0mSELECT * FROM "display_infos" WHERE ("display_infos"."track_id" = 7124) LIMIT 1[0m
+  [4;36;1mCurrentInfo Update (0.6ms)[0m   [0;1mUPDATE "current_infos" SET "last_refresh" = '2010-04-10 01:59:29', "title" = 'Samba da Benção', "year" = '2000', "artist" = 'Bebel Gilberto with Amon Tobin', "updated_at" = '2010-04-10 01:59:29' WHERE "id" = 1[0m
+Rendering now_playing/index
+Completed in 10ms (View: 1, DB: 2) | 200 OK [http://localhost/now_playing.xml]
+
+
+Processing NowPlayingController#index to xml (for 127.0.0.1 at 2010-04-09 22:00:59) [GET]
+  [4;36;1mCurrentInfo Load (1.2ms)[0m   [0;1mSELECT * FROM "current_infos" LIMIT 1[0m
+lastRefresh = 2010-04-10 01:59:29 UTC, 30 seconds ago was Fri Apr 09 22:00:29 -0400 2010
+  [4;35;1mPlayInfo Load (0.3ms)[0m   [0mSELECT * FROM "play_infos" ORDER BY play_infos.id DESC LIMIT 1[0m
+  [4;36;1mMix Load (0.3ms)[0m   [0;1mSELECT * FROM "mixes" WHERE ("mixes"."mix_id" = 2) LIMIT 1[0m
+  [4;35;1mDisplayInfo Load (0.2ms)[0m   [0mSELECT * FROM "display_infos" WHERE ("display_infos"."track_id" = 7124) LIMIT 1[0m
+  [4;36;1mCurrentInfo Update (0.4ms)[0m   [0;1mUPDATE "current_infos" SET "last_refresh" = '2010-04-10 02:00:59', "updated_at" = '2010-04-10 02:00:59' WHERE "id" = 1[0m
+Rendering now_playing/index
+Completed in 45ms (View: 1, DB: 2) | 200 OK [http://localhost/now_playing.xml]
+
+
+Processing NowPlayingController#index to xml (for 127.0.0.1 at 2010-04-09 22:01:51) [GET]
+lastRefresh = 2010-04-10 02:00:59 UTC, 30 seconds ago was Fri Apr 09 22:01:21 -0400 2010
+Rendering now_playing/index
+Completed in 44ms (View: 1, DB: 2) | 200 OK [http://localhost/now_playing.xml]
+
+
+Processing NowPlayingController#index to xml (for 127.0.0.1 at 2010-04-09 22:04:21) [GET]
+lastRefresh = 2010-04-10 02:01:51 UTC, 30 seconds ago was Fri Apr 09 22:03:51 -0400 2010
+found play info track ID 9068
+Rendering now_playing/index
+Completed in 45ms (View: 1, DB: 2) | 200 OK [http://localhost/now_playing.xml]
+
+
+Processing NowPlayingController#index to xml (for 127.0.0.1 at 2010-04-09 22:04:42) [GET]
+lastRefresh = 2010-04-10 02:04:21 UTC, 30 seconds ago was Fri Apr 09 22:04:12 -0400 2010
+Rendering now_playing/index
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://localhost/now_playing.xml]
