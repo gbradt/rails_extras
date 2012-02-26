@@ -3,6 +3,8 @@ class NowPlayingController < ApplicationController
     def index
     
         lastRefresh = nil
+        # The CurrentInfo table holds the song and listener data that was looked up the last
+        # time the web service was called. last_refresh tell us how old it is.
         currentInfo = CurrentInfo.find(:first)
         if currentInfo != nil
             lastRefresh = currentInfo.last_refresh
@@ -10,8 +12,11 @@ class NowPlayingController < ApplicationController
         logger.info "lastRefresh = #{lastRefresh}, 30 seconds ago was #{Time.now.ago(30)}"
         
         if lastRefresh == nil || lastRefresh < Time.now.ago(30)
+            # The PlayInfo table has all song and listener data. Update CurrentInfo with the
+            # last data saved to PlayInfo.
             playInfo = PlayInfo.find(:last)
             if playInfo == nil || playInfo.created_at < Time.now.ago(60)
+                # If PlayInfo is out of date, something is probably wrong.
                 message = "#{Time.new} Last entry in play info table is missing or over a minute old!"
                 logger.warn message
                 if playInfo != nil
@@ -31,7 +36,7 @@ class NowPlayingController < ApplicationController
                 @year = nil
 
             else
-                # The data in CurrentInfo is more than 30 seconds old, so update it. 
+                # PlayInfo has recent data, so update CurrentInfo. 
                 @listeners = playInfo.listeners
                 @mix = nil
                 mixId = playInfo.mix_id
