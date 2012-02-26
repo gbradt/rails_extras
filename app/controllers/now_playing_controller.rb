@@ -31,6 +31,7 @@ class NowPlayingController < ApplicationController
                 @year = nil
 
             else
+                # The data in CurrentInfo is more than 30 seconds old, so update it. 
                 @listeners = playInfo.listeners
                 @mix = nil
                 mixId = playInfo.mix_id
@@ -46,7 +47,7 @@ class NowPlayingController < ApplicationController
                 if trackId == nil
                     # It might be a segment, PSA, etc.
                     testTitle = playInfo.icecast_title
-                    # Don't ignore a mix title, that should be displayed normally
+                    # Don't ignore a mix title, that should be displayed normally.
                     if testTitle.match(/^Between Two Islands/) != nil && mixId == nil
                         # Display the info from the last song before the break
                         @artist = currentInfo.artist
@@ -60,6 +61,7 @@ class NowPlayingController < ApplicationController
                     end
                 else            
                     logger.info "found play info track ID #{trackId}"
+                    # The DisplayInfo table has extended song information such as long title, year, etc.
                     displayInfo = DisplayInfo.find(:first, :conditions => {:track_id => trackId})
                     @artist = displayInfo.artist
                     @year = displayInfo.year
@@ -76,6 +78,7 @@ class NowPlayingController < ApplicationController
             end
             
         else
+            # The data in CurrentInfo is less than 30 seconds old, so we can display it. 
             @listeners = currentInfo.listeners
             @mix = currentInfo.mix_icecast_title
             @artist = currentInfo.artist
@@ -85,11 +88,15 @@ class NowPlayingController < ApplicationController
         end        
     end
     
+    # This is for manually setting the mix counter. This is done to set the current location within
+    # a mix when it is playing as the backup music source. (Unfortunately, when a mix starts for
+    # backup purposes, it is not guaranteed to start from the beginning.)
     def set_mix_counter
     
         counterParam = params[:mixCounter]
         logger.info "counterParam is #{counterParam}"
         worker = MiddleMan.worker(:get_info_worker)
+        # This is how to call a method on the running backroundrb process.
         worker.async_set_mix_counter(:arg => counterParam.to_i)
     
     end

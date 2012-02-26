@@ -6,13 +6,19 @@ class GetInfoWorker < BackgrounDRb::MetaWorker
 
     def create(args = nil)
         logger.debug "worker is created"
+        # If the streaming server is playing a continuous mix, mixCounter keeps track of where
+        # we are in the mix so the correct artist and title information can be displayed.
         cache['mixCounter'] = -1
         cache['updateMixCounter'] = -1
+        # The get_info method will be called every 30 seconds.
         add_periodic_timer(30) {
             get_info
         }
     end
 
+    # This is for manually setting the mix counter. This is done to set the current location within
+    # a mix when it is playing as the backup music source. (Unfortunately, when a mix starts for
+    # backup purposes, it is not guaranteed to start from the beginning.)
     def set_mix_counter (counter)
         logger.info "set_mix_counter called, param is #{counter}"
         cache['updateMixCounter'] = counter
@@ -21,6 +27,7 @@ class GetInfoWorker < BackgrounDRb::MetaWorker
     def get_info
     
         logger.debug "called get_info"
+        # Override mixCounter if it was set manually in set_mix_counter.
         if cache['updateMixCounter'] > 0
             cache['mixCounter'] = cache['updateMixCounter']
             cache['updateMixCounter'] = -1
