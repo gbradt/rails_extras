@@ -8,8 +8,7 @@ The XML file on the streaming server provides two relevant pieces of data: the n
 
 Normally the XML file will contain the name of one song. However, if the main music source is unavailable for some reason, a backup music source takes over. The backup music source is a continuous mix that loops until the main music source is restored. The mix consists of several songs, but the XML file will only contain the name of the mix. For this reason, the application has the ability to identify the actual song playing using a counter to determine where we are within the mix.
 
-The data stored will be used for royalty reporting purposes. In addition, the song data stored in the application database includes 
-information that may be of interest to a listener, such as the year the song was released. The web service uses the most recently stored data to provide this song information for the "now playing" section of the main web site. The web service is available at [main web site]/extras/now_playing.xml. An AJAX script is used on the main site to query the web service and refresh the display. 
+The data stored will be used for royalty reporting purposes. In addition, the song data stored in the application database includes information that may be of interest to a listener, such as the year the song was released. The web service uses the most recently stored data to provide this song information for the "now playing" section of the main web site. The web service is available at [main web site]/extras/now_playing.xml. An AJAX script is used on the main site to query the web service and refresh the display. 
 
 The code in app/controllers/now_playing_controller.rb needs to skip over certain "songs" that aren't really songs, such as segments where the DJ is talking about the music, or a commercial or public service announcement. In those cases, the name of the last actual song played is displayed until a new song starts.
 
